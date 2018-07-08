@@ -1,0 +1,63 @@
+body {
+    line-height: 1.5em;
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif, 'Roboto', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    color: #be2b2f;
+    background-color: #f8dfa9;
+    /* background-image: linear-gradient( 135deg, #70a6ff 10%, #ffe4b1 100%); */
+    background-image: url(../images/burger.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.custom{
+    opacity: 0.8;
+}
+/* 
+a {
+    color: #0052d5;
+}
+
+a:visited {
+    color: #0052d5;
+}
+.space{
+    min-height: 50px;
+}
+header{
+    margin: auto;
+    color: #ffb931;
+    text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+} */
+h1{
+    text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+    color: #be2b2f;
+}
+
+/* .jumbotron {
+    background-image: url(../images/friends.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+    color: #a7020e;
+    background-size: 100% 100%;
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, .14), 0 7px 5px -6px rgba(0, 0, 0, .2), 0 5px 9px 0 rgba(0, 0, 0, .12);
+} */
+
+
+
+@media (max-width: 375px) {
+   
+    body{
+        font-size: 1em;
+    }
+    h2{
+        font-size: 1.5em;
+    }
+    #mobile{
+        color: white;
+    }
+    
+}
