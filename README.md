@@ -18,4 +18,5 @@ A burger logger with MySQL, Node, Express, Handlebars and a homemade ORM (yum!).
 Node.js, MySQL, Handlebars, Express, ORM, Materialize, Bootstrap, Affinity Photo. 
 
 
-![Screen Shot](app/public/assets/images/burger.png)
+![Screen Shot](public/assets/images/burger.png)
+
