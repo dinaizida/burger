@@ -11,7 +11,7 @@
             <div class="custom card light-green">
                 <p>
                 {{this.id}}. {{this.burger_name}}
-                    <form action="/{{this.id}}?_method=PUT" method="POST">
+                    <form method="POST" action="/{{this.id}}?_method=PUT" >
                         <input type="hidden" name="eat" value="true">
                         <button type="submit" class="waves-effect waves-light btn green z-depth-4">DEVOUR IT!</button>
                     </form>
@@ -32,7 +32,7 @@
             <div class=" custom1 card light-green lighten-2">
                 <p class="grey-text">
                  {{this.id}}. {{this.burger_name}} 
-                    <form class="delete-form form-group" action="/{{this.id}}?_method=DELETE" method="POST">
+                    <form method="POST" class="delete-form form-group" action="/{{this.id}}?_method=DELETE">
             			<input type="image" class="trash-icon" src="assets/images/trash.png" alt="trash icon"/>
                     </form>
                 </p>
@@ -48,7 +48,7 @@
         <div class="  col-md-4 col-sm-12 col-xs-12  "></div>
         <div class="  custom col-md-4 col-sm-12 col-xs-12 card light-green  ">
             <h3 class="heading">ADD BURGERS</h3>
-            <form class="add-burger-form" action="/" method="POST">
+            <form method="POST" class="add-burger-form" action="/">
                 <div class="form-group">
                     <input type="text" id="newBurger" name="name" placeholder="Burger name">
                     <button type="submit" class="waves-effect waves-light btn green z-depth-4">Submit</button>
