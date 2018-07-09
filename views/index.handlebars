@@ -2,8 +2,8 @@
     <div class="row">
 
     {{!-- Burgers to eat --}}
-    <div class="col-md-4 col-sm-12 col-xs-12 center-align">
-        <h2>Burgers Available To Eat!</h2>
+    <div class="col-md-3 col-sm-12 col-xs-12 center-align">
+        <h2 id ="mobile">Burgers Available To Eat!</h2>
         <br>  
         <ul>
         {{#each burgers}}
@@ -11,33 +11,30 @@
             <div class="custom card light-green">
                 <p>
                 {{this.id}}. {{this.burger_name}}
-                <form action="/{{this.id}}?_method=PUT" method="POST">
-                    <input type="hidden" name="eat" value="true">
-                    <button type="submit" class="waves-effect waves-light btn green z-depth-4">DEVOUR IT!</button>
-                </form>
-                {{!-- <form class="eat-form form-group" action="/{{this.id}}?_method=PUT" method="POST">
-		        	{{this.burger_name}}
-		            <input type="hidden" name="eat" value="true">
-		            <input type="image" class="eat-icon" src="assets/images/eat.png" alt="eat icon"/>
-		        </form> --}}
-
+                    <form action="/{{this.id}}?_method=PUT" method="POST">
+                        <input type="hidden" name="eat" value="true">
+                        <button type="submit" class="waves-effect waves-light btn green z-depth-4">DEVOUR IT!</button>
+                    </form>
                 </p>
             </div>
             {{/unless}}
         {{/each}}
         </ul>
     </div>
-    <div class="custom col-md-4 col-sm-12 col-xs-12"></div>
+    <div class=" col-md-6 col-sm-12 col-xs-12"></div>
     {{!-- Devoured Burgers --}}
-    <div class="col-md-4 col-sm-12 col-xs-12 center-align">
+    <div class=" col-md-3 col-sm-12 col-xs-12 center-align">
         <h2 id ="mobile" >Burgers That Have Been Eaten!</h2>
         <br>
         <ul>
         {{#each burgers}}
             {{#if this.devoured}}
-            <div class="card light-green lighten-2">
+            <div class=" custom1 card light-green lighten-2">
                 <p class="grey-text">
-                {{this.id}}. {{this.burger_name}}
+                 {{this.id}}. {{this.burger_name}} 
+                    <form class="delete-form form-group" action="/{{this.id}}?_method=DELETE" method="POST">
+            			<input type="image" class="trash-icon" src="assets/images/trash.png" alt="trash icon"/>
+                    </form>
                 </p>
             </div>
             {{/if}}
@@ -45,9 +42,11 @@
         </ul>
     </div>
     </div>
-
+    <br>
+    <br>
     <div class ="row">
-        <div class=" custom col-md-4 col-sm-12 col-xs-12 card light-green ">
+        <div class="  col-md-4 col-sm-12 col-xs-12  "></div>
+        <div class="  custom col-md-4 col-sm-12 col-xs-12 card light-green  ">
             <h3 class="heading">ADD BURGERS</h3>
             <form class="add-burger-form" action="/" method="POST">
                 <div class="form-group">
@@ -56,5 +55,6 @@
                 </div>
             </form>
         </div>
+        <div class="  col-md-4 col-sm-12 col-xs-12  "></div>
     </div>
    

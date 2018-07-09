@@ -18,12 +18,18 @@ router.post("/", function(req, res) {
 	});
 });
 
-// updates a burger entry
+// updates a burger 
 router.put("/:id", function(req, res) {
 	console.log(req.body);
 	burger.updateOne(req.params.id, function() {
 		res.redirect("/");
 	});
 
+});
+// deletes a burger
+router.delete("/:id", function(req, res) {
+	burger.deleteOne(req.params.id, function(result) {
+		res.redirect("/");
+	});
 });
 module.exports = router;

@@ -18,7 +18,13 @@ var burger = {
         orm.updateOne("burgers", "devoured", "1", "id", idNum, function(res) {
             callback(res);
         });
-    }
+	},
+	// deletes a burger entry
+	deleteOne: function(idNum, callback) {
+		orm.deleteOne("burgers", "id", idNum, function(res) {
+			callback(res);
+		});
+	}
 };
 
 module.exports = burger;

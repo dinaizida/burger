@@ -23,6 +23,14 @@ var orm = {
             console.log("Burger updated: " + result);
             callback(result);
         });
+    },
+    deleteOne: function(table, idCol, idValue, callback) {
+      var query = "DELETE FROM ?? WHERE ?? = ?;"
+      connection.query(query, [table, idCol, idValue], function(err, result) {
+        if (err) throw err;
+        console.log("Burger deleted: " + result);
+        callback(result);
+      })
     }
 };
 
