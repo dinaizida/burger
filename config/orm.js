@@ -12,7 +12,7 @@ var orm = {
         var query = "INSERT INTO ?? (??) VALUES (?);";
         connection.query(query, [table, colName, colValue], function(err, result) {
             if (err) throw err;
-            console.log("Burger added: " + result );
+            console.log("Burger added: " + colName + " : " +colValue);
             callback(result);
         });
     },
@@ -20,7 +20,7 @@ var orm = {
         var query = "UPDATE ?? SET ?? = ? WHERE ?? = ?;";
         connection.query(query, [table, colName, colValue, idCol, idValue], function(err, result) {
             if (err) throw err;
-            console.log("Burger updated: " + result);
+            console.log("Burger updated : " + colName + " : " + colValue + ", " + idCol + " :" + idValue);
             callback(result);
         });
     },
@@ -28,7 +28,7 @@ var orm = {
       var query = "DELETE FROM ?? WHERE ?? = ?;"
       connection.query(query, [table, idCol, idValue], function(err, result) {
         if (err) throw err;
-        console.log("Burger deleted: " + result);
+        console.log("Burger deleted number: " + idValue);
         callback(result);
       })
     }
